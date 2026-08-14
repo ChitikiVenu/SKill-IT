@@ -120,6 +120,7 @@ function initBackgroundNetwork() {
   window.addEventListener('touchend', () => { mouse.active = false; });
 
   window.addEventListener('resize', resize);
+  window.addEventListener('orientationchange', resize);
   resize();
 
   const dotColor = '25,58,168';
@@ -295,6 +296,7 @@ function initHeroVisual() {
   }
 
   window.addEventListener('resize', resize);
+  window.addEventListener('orientationchange', resize);
   window.addEventListener('mousemove', (e) => {
     const rect = hero.getBoundingClientRect();
     mouse.x = e.clientX - rect.left;

@@ -128,6 +128,41 @@
     </div>
     <div style="max-width:760px;"><p style="color:var(--ink-500);font-size:15.5px;line-height:1.75;margin-top:14px;">There's a real gap between knowing how to write a clever prompt and knowing how to build an AI system someone can actually rely on — one that retrieves the right context, calls the right tool, and fails gracefully when something goes wrong. This course is built to close that gap by treating AI engineering as an engineering discipline, not a prompting trick.</p><p style="color:var(--ink-500);font-size:15.5px;line-height:1.75;margin-top:14px;">You'll build a solid Python and machine learning foundation first, then move into the generative AI stack most teams are actually hiring for: LLMs, retrieval-augmented generation, vector databases and agent frameworks like LangChain and LangGraph. By the end, you'll have taken a project from a local prototype to something deployed behind an API using Docker — the part most tutorials skip entirely.</p></div>
   </div>
+</section><section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      
+      <h2>A Closer Look Inside the Work</h2>
+      
+    </div>
+    <div class="media-row">
+      <div class="media-art"><svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg">
+          <rect x="20" y="24" width="440" height="292" rx="14" fill="#fff" stroke="#e6eaf2"/>
+          <g font-family="IBM Plex Mono, monospace" font-size="11" fill="#5b6584">
+            <rect x="46" y="60" width="110" height="46" rx="8" fill="#e6f6f9" stroke="#cdeef4"/><text x="60" y="88">User query</text>
+            <rect x="196" y="60" width="110" height="46" rx="8" fill="#e6f6f9" stroke="#cdeef4"/><text x="206" y="88">Retrieve docs</text>
+            <rect x="346" y="60" width="90" height="46" rx="8" fill="#0e8fa6"/><text x="360" y="88" fill="#fff">LLM</text>
+            <path d="M156 83h34" stroke="#0e8fa6" stroke-width="2" marker-end="url(#arrow)"/>
+            <path d="M306 83h34" stroke="#0e8fa6" stroke-width="2" marker-end="url(#arrow)"/>
+          </g>
+          <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#0e8fa6"/></marker></defs>
+          <rect x="46" y="140" width="390" height="130" rx="8" fill="#f6f8fb"/>
+          <text x="62" y="164" font-family="IBM Plex Mono, monospace" font-size="10" fill="#5b6584">vector store</text>
+          <circle cx="80" cy="200" r="8" fill="#0e8fa6"/><circle cx="130" cy="220" r="6" fill="#14a8c2"/>
+          <circle cx="170" cy="190" r="7" fill="#0e8fa6"/><circle cx="220" cy="215" r="9" fill="#14a8c2"/>
+          <circle cx="270" cy="185" r="6" fill="#0e8fa6"/><circle cx="320" cy="210" r="7" fill="#14a8c2"/>
+          <circle cx="370" cy="195" r="8" fill="#0e8fa6"/>
+          <line x1="80" y1="200" x2="170" y2="190" stroke="#cdeef4"/><line x1="170" y1="190" x2="270" y2="185" stroke="#cdeef4"/>
+          <line x1="220" y1="215" x2="320" y2="210" stroke="#cdeef4"/><line x1="320" y1="210" x2="370" y2="195" stroke="#cdeef4"/>
+          <text x="360" y="256" font-family="IBM Plex Mono, monospace" font-size="10" fill="#7b839c">response: grounded, cited</text>
+        </svg></div>
+      <div class="media-copy">
+        <h3>How a RAG Pipeline Actually Moves</h3>
+        <p>This is the shape of the system you'll build — a user question gets routed to your own document store before it ever reaches the model, so the answer stays grounded in your data instead of a plausible-sounding guess.</p>
+        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Trace a query from retrieval through to a grounded, cited response</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Debug why a retrieval step returned the wrong context</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Wire the pipeline behind a real API endpoint, not just a notebook</span></li></ul>
+      </div>
+    </div>
+  </div>
 </section><section class="section section-alt">
   <div class="wrap">
     <div class="section-head">

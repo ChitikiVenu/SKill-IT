@@ -128,6 +128,36 @@
     </div>
     <div style="max-width:760px;"><p style="color:var(--ink-500);font-size:15.5px;line-height:1.75;margin-top:14px;">Cyber security work is rarely about memorizing definitions — it's about knowing how attackers actually move through a network, and building the instincts to spot that movement before it becomes a breach. This course is built around that instinct: every concept is taught alongside the tool an analyst would actually reach for.</p><p style="color:var(--ink-500);font-size:15.5px;line-height:1.75;margin-top:14px;">You'll start with the fundamentals of networking and Linux, since almost every security tool assumes you're comfortable there, then move into offensive techniques (how systems get compromised) before switching to defensive ones (how they get protected and monitored). By the end, you'll have scanned real lab environments, reported vulnerabilities the way a professional would, and worked through an incident from detection to write-up.</p></div>
   </div>
+</section><section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      
+      <h2>A Closer Look Inside the Work</h2>
+      
+    </div>
+    <div class="media-row">
+      <div class="media-art"><svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg">
+          <rect x="30" y="40" width="420" height="260" rx="14" fill="#0b1330"/>
+          <rect x="30" y="40" width="420" height="34" rx="14" fill="#182449"/>
+          <circle cx="52" cy="57" r="5" fill="#ff5470"/><circle cx="68" cy="57" r="5" fill="#f5a524"/><circle cx="84" cy="57" r="5" fill="#3ddc97"/>
+          <g font-family="IBM Plex Mono, monospace" font-size="12" fill="#8ecbff">
+            <text x="48" y="104">$ nmap -sV 10.0.0.0/24</text>
+            <text x="48" y="126" fill="#3ddc97">22/tcp   open  ssh</text>
+            <text x="48" y="146" fill="#f5a524">443/tcp  open  https</text>
+            <text x="48" y="166" fill="#ff5470">8080/tcp open  http-proxy (flagged)</text>
+            <text x="48" y="196">$ report --scope=lab-01 --format=pdf</text>
+            <text x="48" y="216" fill="#3ddc97">writing findings.pdf ... done</text>
+          </g>
+          <rect x="30" y="250" width="420" height="1" fill="#28345a"/>
+          <text x="48" y="272" font-family="IBM Plex Mono, monospace" font-size="11" fill="#5b6584">lab-01 · scan complete · 3 findings</text>
+        </svg></div>
+      <div class="media-copy">
+        <h3>A Scan-and-Report Cycle, Start to Finish</h3>
+        <p>This is roughly what a lab session looks like once you're past the fundamentals — running a scan, reading the results critically instead of trusting them blindly, and writing up findings the way a real assessment report would.</p>
+        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Scan a lab network with Nmap and interpret open ports</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Flag and prioritize findings by real-world risk, not just severity score</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Write a findings report a non-technical manager could act on</span></li></ul>
+      </div>
+    </div>
+  </div>
 </section><section class="section section-alt">
   <div class="wrap">
     <div class="section-head">
