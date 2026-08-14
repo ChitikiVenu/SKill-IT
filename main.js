@@ -74,7 +74,7 @@ function initBackgroundNetwork() {
   let width, height, dpr;
   let dots = [];
   const mouse = { x: -9999, y: -9999, active: false };
-  const REPEL_RADIUS = 130;
+  const REPEL_RADIUS = 90;
   const CONNECT_DISTANCE = 120;
   const FRICTION = 0.94;
 
@@ -122,8 +122,8 @@ function initBackgroundNetwork() {
   window.addEventListener('resize', resize);
   resize();
 
-  const dotColor = '36,87,224';
-  const lineColor = '36,87,224';
+  const dotColor = '25,58,168';
+  const lineColor = '25,58,168';
 
   function tick() {
     ctx.clearRect(0, 0, width, height);
@@ -135,7 +135,7 @@ function initBackgroundNetwork() {
         const dy = d.y - mouse.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < REPEL_RADIUS && dist > 0.001) {
-          const force = (1 - dist / REPEL_RADIUS) * 1.6;
+          const force = (1 - dist / REPEL_RADIUS) * 0.7;
           d.vx += (dx / dist) * force;
           d.vy += (dy / dist) * force;
         }
@@ -161,7 +161,7 @@ function initBackgroundNetwork() {
         const dx = a.x - b.x, dy = a.y - b.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < CONNECT_DISTANCE) {
-          const alpha = (1 - dist / CONNECT_DISTANCE) * 0.16;
+          const alpha = (1 - dist / CONNECT_DISTANCE) * 0.24;
           ctx.strokeStyle = `rgba(${lineColor},${alpha})`;
           ctx.lineWidth = 1;
           ctx.beginPath();
@@ -176,7 +176,7 @@ function initBackgroundNetwork() {
     for (const d of dots) {
       ctx.beginPath();
       ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(${dotColor},0.4)`;
+      ctx.fillStyle = `rgba(${dotColor},0.55)`;
       ctx.fill();
     }
   }
