@@ -7,8 +7,8 @@
 
 :root{
   --bg:#ffffff;
-  --bg-soft:#f6f8fb;
-  --bg-blue-tint:#eef4ff;
+  --bg-soft:rgba(246,248,251,0.9);
+  --bg-blue-tint:rgba(238,244,255,0.88);
   --surface:#ffffff;
   --line:#e6eaf2;
   --line-strong:#d7deec;
@@ -84,7 +84,6 @@ p{margin:0;}
 @media (max-width:780px){ .section{padding:56px 0;} }
 .section-alt{background:var(--bg-soft);}
 .section-tint{background:var(--bg-blue-tint);}
-
 .section-head{max-width:660px; margin:0 0 42px;}
 .section-head h2{margin-top:10px;}
 .section-head p{margin-top:14px; color:var(--ink-500); font-size:16px;}
@@ -348,3 +347,22 @@ p{margin:0;}
 
 .mt-0{margin-top:0;}
 .text-center{text-align:center;}
+
+/* Site-wide interactive dot-network background */
+#bg-network{
+  position:fixed; inset:0; z-index:-1; width:100%; height:100%;
+  pointer-events:none;
+}
+@media (prefers-reduced-motion: reduce){ #bg-network{ display:none; } }
+
+/* Compact module checklist — replaces bulky one-line cards to remove dead whitespace */
+.module-list-card{ padding:10px 28px; }
+.module-grid{ display:grid; grid-template-columns:repeat(2,1fr); }
+@media (max-width:640px){ .module-grid{grid-template-columns:1fr;} }
+.module-item{
+  display:flex; align-items:center; gap:11px; padding:14px 4px; border-bottom:1px solid var(--line);
+  font-size:14.5px; color:var(--ink-700); font-weight:500;
+}
+.module-grid > .module-item:nth-last-child(-n+2){ border-bottom:none; }
+@media (max-width:640px){ .module-grid > .module-item{ border-bottom:1px solid var(--line); } .module-grid > .module-item:last-child{ border-bottom:none; } }
+.module-item svg{width:17px; height:17px; color:var(--accent); flex-shrink:0;}
